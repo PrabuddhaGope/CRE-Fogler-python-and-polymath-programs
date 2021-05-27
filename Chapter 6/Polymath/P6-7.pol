@@ -1,0 +1,39 @@
+No Title  |POLVER05_0 |1
+#Differential equations
+d(Fa)/d(W) = ra
+d(Fb)/d(W) = rb
+d(Fc)/d(W) = rc
+d(Fd)/d(W) = rd - Rd
+
+#Explicit equations
+ra = -k * (Ca * Cb - Cc * Cd / Kc)
+rb = ra
+rc = -ra
+rd = -ra
+
+Rd = kcd * Cd
+
+Ca = Ct0 * Fa/Ft
+Cb = Ct0 * Fb/Ft
+Cc = Ct0 * Fc/Ft
+Cd = Ct0 * Fd/Ft
+Ft = Fa + Fb + Fc + Fd
+
+X = (Fa0 - Fa)/Fa0
+
+#Constants
+k = 1.37
+Kc = 1.44
+kcd = 0.1
+Ct0 = 0.4
+v0 = 20
+Fa0 = 4
+
+#Boundary values
+Fa(0) = 4
+Fb(0) = 2
+Fc(0) = 0
+Fd(0) = 0
+W(0) = 0
+W(f) = 505
+

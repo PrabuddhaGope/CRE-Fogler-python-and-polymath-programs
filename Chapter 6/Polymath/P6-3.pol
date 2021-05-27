@@ -1,0 +1,54 @@
+No Title  |POLVER05_0 |1
+d(Na1)/d(t) = ra1*V1 - v0*Ca1
+d(Nb1)/d(t) = rb1*V1 - v0*Cb1
+d(Nc1)/d(t) = rc1*V1 - v0*Cc1
+
+d(Na2)/d(t) = ra2*V2 + v0*Ca1
+d(Nb2)/d(t) = rb2*V2 + v0*Cb1
+d(Nc2)/d(t) = rc2*V2 + v0*Cc1
+
+ra1 = -k*Ca1*Cb1
+rb1 = ra1
+rc1 = -ra1
+
+ra2 = -k*Ca2*Cb2
+rb2 = ra2
+rc2 = -ra2
+
+Ca1 = Na1/V1
+Cb1 = Nb1/V1
+Cc1 = Nc1/V1
+
+Ca2 = Na2/V2
+Cb2= Nb2/V2
+Cc2 = Nc2/V2
+
+Na1(0) = 2000
+Nb1(0) = 2000 
+Nc1(0) = 0
+
+Na2(0) = 0
+Nb2(0) = 0
+Nc2(0) = 0
+
+Na10 = 2000
+Na20 = 0.00000001
+
+V1 = V10 - v0*t
+V2 = V20 + v0*t
+
+V10 = 1000
+V20 = 0.0000000001
+k = 0.0445
+v0 = 10
+
+X1 = (Na10 - Na1)/Na10
+X2 = (Nc2)/(Nc2 + Na2 + 0.00000000001)
+
+t(0) = 0
+t(f) = 99.99
+
+
+
+
+

@@ -1,0 +1,37 @@
+No Title  |POLVER05_0 |1
+#Differential equations
+d(Fa)/d(V) = ra - Ra
+d(Fb)/d(V) = rb - Rb
+d(Fc)/d(V) = rc
+
+#Explicit equations
+ra = -k*(Ca - Cb*Cc^2/Kc)
+Ra = kca * Ca
+Rb = kcb * Cb
+
+rb = -ra
+rc = -2*ra
+
+Ca = Fa/v0
+Cb = Fb/v0
+Cc = Fc/v0
+
+X = Fc/Fa0
+#Constants
+k = 0.166667 
+Kc = 10^4
+v0 = 0.0016667
+kca = 0.016667
+kcb = 0.66666667
+
+#Initial and final conditions
+Fa(0) = 1.66667
+Fa0 = 1.66667
+Fb(0) = 0
+Fc(0) = 0
+V(0) = 0
+V(f) = 0.02
+
+
+
+
