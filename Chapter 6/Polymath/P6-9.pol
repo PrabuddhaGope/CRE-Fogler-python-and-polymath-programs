@@ -1,0 +1,41 @@
+No Title  |POLVER05_0 |1
+#Differential equations
+d(Na)/d(t) = ra*V - v0*Ca
+d(Nb)/d(t) = rb*V - v0*Cb + v0*Cb0
+d(Nc)/d(t) = rc*V - v0*Cc
+d(Nd)/d(t) = rd*V - v0*Cd
+
+#Rate law
+ra = -k * Ca * Cb
+k = k0 * exp(-E/R * (1/T - 1/T0))
+
+rb = ra
+rc = -ra
+rd = -ra
+
+#Explicit equations
+Ca = Na/V
+Cb = Nb/V
+Cc = Nc/V
+Cd = Nd/V
+
+#Constants 
+k0 = 5.2 * 10^-5
+E = 42810
+T0 = 293
+R = 8.314
+V = 4418
+
+#Parameters
+T = 310
+v0 = 1	#dm^3/s
+
+#Initial and final conditions
+Na(0) = 883.58
+Nb(0) = 0
+Nc(0) = 0
+Nd(0) = 0
+Cb0 = 0.25
+t(0) = 0
+t(f) = 3600
+
